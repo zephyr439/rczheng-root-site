@@ -1,6 +1,25 @@
-# A statically generated blog example using Next.js, Markdown, and TypeScript
+# RC Zheng Root Site
 
-This is the existing [blog-starter](https://github.com/vercel/next.js/tree/canary/examples/blog-starter) plus TypeScript.
+This is the root site for rczheng.com that serves as a landing page and proxy to various projects.
+
+## Active Path Mappings
+
+- `/` → Root site (Next.js blog template - will be replaced with Framer profile)
+- `/hci/redesign` → Proxies to https://hci-1-demo.vercel.app (iPhone alarm redesign demo)
+
+## Future Mappings
+- `/blog` → TBD (could use this Next.js blog)
+- `/projects` → TBD
+- `/docs` → TBD
+
+## Technical Setup
+This uses Vercel rewrites in `vercel.json` to proxy different paths to different services while maintaining the same domain (rczheng.com).
+
+---
+
+# Original Template Info
+
+A statically generated blog example using Next.js, Markdown, and TypeScript.
 
 This example showcases Next.js's [Static Generation](https://nextjs.org/docs/app/building-your-application/routing/layouts-and-templates) feature using Markdown files as the data source.
 

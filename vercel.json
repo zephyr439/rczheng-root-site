@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/hci/redesign/:path*",
+      "destination": "https://hci-1-demo.vercel.app/:path*"
+    },
+    {
+      "source": "/hci/redesign",
+      "destination": "https://hci-1-demo.vercel.app/"
+    }
+  ]
+}
