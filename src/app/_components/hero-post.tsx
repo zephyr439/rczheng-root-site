@@ -24,7 +24,7 @@ export function HeroPost({
   return (
     <section>
       <div className="mb-8 md:mb-16">
-        <CoverImage title={title} src={coverImage} slug={slug} />
+        <CoverImage title={title} src={coverImage} />
       </div>
       <div className="mb-20 md:mb-28">
         <h3 className="mb-4 text-4xl lg:text-5xl leading-tight">
