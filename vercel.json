@@ -7,6 +7,14 @@
     {
       "source": "/hci/redesign",
       "destination": "https://hci-1-demo.vercel.app/"
+    },
+    {
+      "source": "/engs4/lab1/:path*",
+      "destination": "https://engs4-lab1.vercel.app/:path*"
+    },
+    {
+      "source": "/engs4/lab1",
+      "destination": "https://engs4-lab1.vercel.app/"
     }
   ]
 }

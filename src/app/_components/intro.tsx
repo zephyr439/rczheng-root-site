@@ -14,6 +14,13 @@ export function Intro() {
         >
           visit here
         </a>
+        . For Engs 4 Lab 1,{" "}
+        <a
+          href="/engs4/lab1"
+          className="underline hover:text-blue-600 duration-200 transition-colors"
+        >
+          visit here
+        </a>
         .
       </h4>
     </section>
