@@ -1,4 +1,16 @@
 {
+  "redirects": [
+    {
+      "source": "/travel/:path*",
+      "destination": "https://rczheng.wixsite.com/travel/:path*",
+      "permanent": false
+    },
+    {
+      "source": "/travel",
+      "destination": "https://rczheng.wixsite.com/travel",
+      "permanent": false
+    }
+  ],
   "rewrites": [
     {
       "source": "/hci/redesign/:path*",

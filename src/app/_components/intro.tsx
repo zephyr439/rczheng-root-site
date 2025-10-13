@@ -17,10 +17,20 @@ export function Intro() {
           </a>
           .
         </h4>
-        <h4>
+        <h4 className="mb-2">
           For Engs 4 Lab 1,{" "}
           <a
             href="/engs4/lab1"
+            className="underline hover:text-blue-600 duration-200 transition-colors"
+          >
+            visit here
+          </a>
+          .
+        </h4>
+        <h4>
+          For Engs 4 Lab 2,{" "}
+          <a
+            href="/travel"
             className="underline hover:text-blue-600 duration-200 transition-colors"
           >
             visit here
