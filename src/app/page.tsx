@@ -18,12 +18,11 @@ export default function Index() {
         {/* Content appears after scrolling */}
         <Container>
           <section className="mt-16 md:mt-20 mb-16 md:mb-20">
-            <div className="mb-6 space-y-2">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100">I'm Ruichen Zheng</h2>
-              <div className="text-xl md:text-2xl leading-relaxed text-gray-800 dark:text-gray-200 space-y-2">
-                <p>A Dartmouth '26 Math & CS student.</p>
-                <p>I spend half the time training models and the other half exploring the world.</p>
-                <p>I am currently interested in AI, ML, and Photography.</p>
+            <div className="mb-6 space-y-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100">I'm Ruichen Zheng,</h2>
+              <div className="text-xl md:text-2xl leading-relaxed text-gray-800 dark:text-gray-200 space-y-4">
+                <p>a Dartmouth '26 Math & CS student,</p>
+                <p>working on AI, ML, and Web stuff half of my time.</p>
               </div>
             </div>
             <div className="mb-4">
