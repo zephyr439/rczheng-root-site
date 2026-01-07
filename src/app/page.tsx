@@ -14,8 +14,8 @@ export default function Index() {
       {/* First Screen - Landscape/Wide: Header + Image only */}
       <section className="min-h-screen hidden landscape:flex flex-col justify-center py-4">
         <Container>
-          <div className="flex-col flex items-center justify-center mb-4 lg:mb-8">
-            <h1 className="text-5xl lg:text-8xl font-bold tracking-tighter leading-tight text-center mb-4 lg:mb-12">
+          <div className="flex-col flex mb-4 lg:mb-8">
+            <h1 className="text-5xl lg:text-8xl font-bold tracking-tighter leading-tight text-left mb-4 lg:mb-12">
               R.Z's Home.
             </h1>
           </div>
@@ -32,22 +32,22 @@ export default function Index() {
       </section>
 
       {/* First Screen - Portrait/Narrow: Header + Image + Intro */}
-      <section className="min-h-screen landscape:hidden flex flex-col justify-center py-6">
+      <section className="min-h-screen landscape:hidden flex flex-col justify-center py-8">
         <Container>
-          <h1 className="text-3xl sm:text-4xl font-bold tracking-tighter leading-tight text-center mb-4 sm:mb-6">
-            R.Z's Home.
+          <h1 className="text-6xl sm:text-7xl font-bold tracking-tighter leading-tight text-left mb-8">
+            R.Z's<br />Home.
           </h1>
-          <div className="mb-2 max-h-[35vh] overflow-hidden">
+          <div className="mb-6 max-h-[35vh] overflow-hidden">
             <CoverImage
               title="R. Zheng's Personal Website"
               src="/assets/blog/dynamic-routing/cover.jpg"
             />
           </div>
-          <p className="text-xs text-gray-600 dark:text-gray-400 text-center mb-4 sm:mb-6">
+          <p className="text-sm text-gray-600 dark:text-gray-400 text-left mb-8">
             Hanksville, UT. Sept 2025
           </p>
-          <p className="text-base sm:text-lg leading-relaxed text-gray-800 dark:text-gray-200">
-            <strong>I'm Ruichen Zheng</strong>, a Math & CS student at Dartmouth who spends half the time training models and the other half exploring the world. Currently interested in ML, AI for education, and web development.
+          <p className="text-xl leading-relaxed text-gray-800 dark:text-gray-200">
+            <strong>I'm Ruichen Zheng</strong>, a Math & CS student at Dartmouth who spends half the time training models and the other half exploring the world. Currently interested in ML, AI for Education, and Web Development.
           </p>
         </Container>
       </section>
@@ -56,7 +56,7 @@ export default function Index() {
         {/* Introduction - Landscape only (portrait has it in first screen) */}
         <section className="mb-16 md:mb-20 hidden landscape:block">
           <p className="text-xl lg:text-2xl leading-relaxed text-gray-800 dark:text-gray-200">
-            <strong>I'm Ruichen Zheng</strong>, a Math & CS student at Dartmouth who spends half the time training models and the other half exploring the world. Currently interested in ML, AI for education, and web development.
+            <strong>I'm Ruichen Zheng</strong>, a Math & CS student at Dartmouth who spends half the time training models and the other half exploring the world. Currently interested in ML, AI for Education, and Web Development.
           </p>
         </section>
 
