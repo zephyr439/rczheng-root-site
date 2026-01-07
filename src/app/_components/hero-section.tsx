@@ -102,10 +102,13 @@ export function HeroSection({ isLandscape = false, projects = [] }: HeroSectionP
             <p className="text-base text-gray-600 dark:text-gray-400 text-left mb-8">
               Hanksville, UT. Sept 2025
             </p>
-            <div className="text-2xl leading-relaxed text-gray-800 dark:text-gray-200 mb-6 space-y-2">
-              <p><strong>I'm Ruichen Zheng</strong>, a Dartmouth '26 Math & CS student.</p>
-              <p>I spend half the time training models and the other half exploring the world.</p>
-              <p>I am currently interested in AI, ML, and Photography.</p>
+            <div className="mb-6 space-y-2">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100">I'm Ruichen Zheng</h2>
+              <div className="text-xl md:text-2xl leading-relaxed text-gray-800 dark:text-gray-200 space-y-2">
+                <p>A Dartmouth '26 Math & CS student.</p>
+                <p>I spend half the time training models and the other half exploring the world.</p>
+                <p>I am currently interested in AI, ML, and Photography.</p>
+              </div>
             </div>
             <div className="mb-4">
               <a
