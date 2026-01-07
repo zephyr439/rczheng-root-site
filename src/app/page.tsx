@@ -1,5 +1,6 @@
 import Container from "@/app/_components/container";
 import { ExpandableSection } from "@/app/_components/expandable-section";
+import CoverImage from "@/app/_components/cover-image";
 
 export default function Index() {
   const courseProjects = [
@@ -15,8 +16,25 @@ export default function Index() {
   return (
     <main>
       <Container>
+        {/* Blog Header */}
+        <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
+          <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
+            R.Z's<br />Blog.
+          </h1>
+        </section>
+
+        {/* Cover Image */}
+        <section>
+          <div className="mb-8 md:mb-16">
+            <CoverImage
+              title="R. Zheng's Personal Website"
+              src="/assets/blog/dynamic-routing/cover.jpg"
+            />
+          </div>
+        </section>
+
         {/* Introduction */}
-        <section className="mt-16 mb-16 md:mb-20">
+        <section className="mb-16 md:mb-20">
           <p className="text-xl md:text-2xl leading-relaxed text-gray-800 dark:text-gray-200 mb-6">
             <strong>I'm Ruichen Zheng</strong>, a Math & CS student at Dartmouth who spends half the time training models and the other half exploring the world. Currently interested in ML, AI for education, and web development.
           </p>
