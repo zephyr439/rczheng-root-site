@@ -86,8 +86,8 @@ export function HeroSection({ isLandscape = false, projects = [] }: HeroSectionP
         <div ref={containerRef}>
           <Container>
             <div className="sticky top-0 pt-8 pb-4 bg-white dark:bg-slate-900 z-20">
-              <h1 className="text-7xl sm:text-8xl font-bold tracking-tighter leading-tight text-left">
-                R.Z's<br />Home.
+              <h1 className="text-6xl sm:text-7xl font-bold tracking-tighter leading-tight text-left">
+                R.Z's Home.
               </h1>
             </div>
             <div className="mb-6 max-h-[30vh] overflow-hidden">
