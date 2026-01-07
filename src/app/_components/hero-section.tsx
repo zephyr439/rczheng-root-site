@@ -112,7 +112,7 @@ export function HeroSection({ isLandscape = false, projects = [] }: HeroSectionP
             <div className="mb-4">
               <a
                 href="/cv.pdf"
-                className="text-lg font-medium text-blue-600 dark:text-blue-400 hover:underline"
+                className="text-xl md:text-2xl font-medium text-blue-600 dark:text-blue-400 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >

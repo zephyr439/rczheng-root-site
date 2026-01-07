@@ -28,7 +28,7 @@ export default function Index() {
             <div className="mb-4">
               <a
                 href="/cv.pdf"
-                className="text-lg font-medium text-blue-600 dark:text-blue-400 hover:underline"
+                className="text-xl md:text-2xl font-medium text-blue-600 dark:text-blue-400 hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -51,7 +51,7 @@ export default function Index() {
             <div className="mt-4">
               <a
                 href="/journeys"
-                className="text-lg text-blue-600 dark:text-blue-400 hover:underline"
+                className="text-xl md:text-2xl text-blue-600 dark:text-blue-400 hover:underline"
               >
                 View my travel portfolio →
               </a>
@@ -105,7 +105,7 @@ export default function Index() {
             <div className="mt-4">
               <a
                 href="/journeys"
-                className="text-lg text-blue-600 dark:text-blue-400 hover:underline"
+                className="text-xl md:text-2xl text-blue-600 dark:text-blue-400 hover:underline"
               >
                 View my travel portfolio →
               </a>
