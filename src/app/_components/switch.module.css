@@ -1,5 +1,6 @@
 .switch {
   all: unset;
+  position: relative;
   display: inline-block;
   color: currentColor;
   border-radius: 50%;
