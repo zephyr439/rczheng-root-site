@@ -3,12 +3,14 @@
 import { useEffect, useRef, useState } from "react";
 import Container from "./container";
 import CoverImage from "./cover-image";
+import { ExpandableSection } from "./expandable-section";
 
 interface HeroSectionProps {
   isLandscape?: boolean;
+  projects?: Array<{ name: string; url: string }>;
 }
 
-export function HeroSection({ isLandscape = false }: HeroSectionProps) {
+export function HeroSection({ isLandscape = false, projects = [] }: HeroSectionProps) {
   const [scrolled, setScrolled] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const [viewportHeight, setViewportHeight] = useState(0);
@@ -97,9 +99,20 @@ export function HeroSection({ isLandscape = false }: HeroSectionProps) {
             <p className="text-base text-gray-600 dark:text-gray-400 text-left mb-8">
               Hanksville, UT. Sept 2025
             </p>
-            <p className="text-2xl leading-relaxed text-gray-800 dark:text-gray-200 mb-0">
+            <p className="text-2xl leading-relaxed text-gray-800 dark:text-gray-200 mb-6">
               <strong>I'm Ruichen Zheng</strong>, a Math & CS student at Dartmouth who spends half the time training models and the other half exploring the world. Currently interested in ML, AI for Education, and Web Development.
             </p>
+            <div className="mb-4">
+              <a
+                href="/cv.pdf"
+                className="text-lg font-medium text-blue-600 dark:text-blue-400 hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Here is my CV →
+              </a>
+            </div>
+            <ExpandableSection title="Current Projects" items={projects} />
           </Container>
         </div>
       </div>

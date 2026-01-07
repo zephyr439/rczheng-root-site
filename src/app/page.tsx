@@ -84,28 +84,11 @@ export default function Index() {
 
       {/* Portrait Layout */}
       <div className="landscape:hidden">
-        <HeroSection isLandscape={false} />
+        <HeroSection isLandscape={false} projects={currentProjects} />
 
         {/* Content appears after scrolling */}
         <Container>
-          <section className="mt-16 md:mt-20 mb-16 md:mb-20">
-            <p className="text-xl lg:text-2xl leading-relaxed text-gray-800 dark:text-gray-200 mb-6">
-              <strong>I'm Ruichen Zheng</strong>, a Math & CS student at Dartmouth who spends half the time training models and the other half exploring the world. Currently interested in ML, AI for Education, and Web Development.
-            </p>
-            <div className="mb-4">
-              <a
-                href="/cv.pdf"
-                className="text-lg font-medium text-blue-600 dark:text-blue-400 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Here is my CV →
-              </a>
-            </div>
-            <ExpandableSection title="Current Projects" items={currentProjects} />
-          </section>
-
-          <section className="mb-20 md:mb-28">
+          <section className="mt-16 md:mt-20 mb-20 md:mb-28">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100">
               More About Me ...
             </h2>
