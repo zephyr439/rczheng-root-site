@@ -53,61 +53,63 @@ export default function Index() {
         </Container>
       </section>
 
-      <Container>
-        {/* Introduction - Landscape only (portrait has it in first screen) */}
-        <ScrollReveal>
-          <section className="mb-16 md:mb-20 hidden landscape:block">
-            <p className="text-xl lg:text-2xl leading-relaxed text-gray-800 dark:text-gray-200">
-              <strong>I'm Ruichen Zheng</strong>, a Math & CS student at Dartmouth who spends half the time training models and the other half exploring the world. Currently interested in ML, AI for Education, and Web Development.
-            </p>
-          </section>
-        </ScrollReveal>
+      <div className="relative -mt-16">
+        <Container>
+          {/* Introduction - Landscape only (portrait has it in first screen) */}
+          <ScrollReveal className="bg-white dark:bg-slate-900">
+            <section className="pt-16 mb-16 md:mb-20 hidden landscape:block">
+              <p className="text-xl lg:text-2xl leading-relaxed text-gray-800 dark:text-gray-200">
+                <strong>I'm Ruichen Zheng</strong>, a Math & CS student at Dartmouth who spends half the time training models and the other half exploring the world. Currently interested in ML, AI for Education, and Web Development.
+              </p>
+            </section>
+          </ScrollReveal>
 
-        {/* The Academic Half */}
-        <ScrollReveal>
-          <section className="mb-16 md:mb-20">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100">
-              The Academic Half
-            </h2>
+          {/* The Academic Half */}
+          <ScrollReveal className="bg-white dark:bg-slate-900">
+            <section className="pt-4 landscape:pt-0 mb-16 md:mb-20">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+                The Academic Half
+              </h2>
 
-            <div className="mb-4">
-              <a
-                href="/cv.pdf"
-                className="text-lg font-medium text-blue-600 dark:text-blue-400 hover:underline"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Here is my CV →
-              </a>
-            </div>
+              <div className="mb-4">
+                <a
+                  href="/cv.pdf"
+                  className="text-lg font-medium text-blue-600 dark:text-blue-400 hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Here is my CV →
+                </a>
+              </div>
 
-            <ExpandableSection title="Current Projects" items={currentProjects} />
-          </section>
-        </ScrollReveal>
+              <ExpandableSection title="Current Projects" items={currentProjects} />
+            </section>
+          </ScrollReveal>
 
-        {/* The Adventure Half */}
-        <ScrollReveal>
-          <section className="mb-20 md:mb-28">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100">
-              The Adventure Half
-            </h2>
-            <div className="text-xl md:text-2xl leading-relaxed text-gray-800 dark:text-gray-200 mb-6 space-y-4">
-              <p>The other half?</p>
-              <p>From African savannas to Arctic fjords, from rainforest streams to glacial peaks.</p>
-              <p><strong>60+ countries, 30+ national parks</strong>, and countless stories captured through my lens.</p>
-              <p>The journey continues.</p>
-            </div>
-            <div className="mt-4">
-              <a
-                href="/journeys"
-                className="text-lg text-blue-600 dark:text-blue-400 hover:underline"
-              >
-                View my travel portfolio →
-              </a>
-            </div>
-          </section>
-        </ScrollReveal>
-      </Container>
+          {/* The Adventure Half */}
+          <ScrollReveal className="bg-white dark:bg-slate-900">
+            <section className="pt-4 mb-20 md:mb-28">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+                The Adventure Half
+              </h2>
+              <div className="text-xl md:text-2xl leading-relaxed text-gray-800 dark:text-gray-200 mb-6 space-y-4">
+                <p>The other half?</p>
+                <p>From African savannas to Arctic fjords, from rainforest streams to glacial peaks.</p>
+                <p><strong>60+ countries, 30+ national parks</strong>, and countless stories captured through my lens.</p>
+                <p>The journey continues.</p>
+              </div>
+              <div className="mt-4">
+                <a
+                  href="/journeys"
+                  className="text-lg text-blue-600 dark:text-blue-400 hover:underline"
+                >
+                  View my travel portfolio →
+                </a>
+              </div>
+            </section>
+          </ScrollReveal>
+        </Container>
+      </div>
     </main>
   );
 }
