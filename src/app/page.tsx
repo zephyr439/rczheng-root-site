@@ -33,7 +33,7 @@ export default function Index() {
       </section>
 
       {/* First Screen - Portrait/Narrow: Header + Image + Intro */}
-      <section className="min-h-screen landscape:hidden flex flex-col justify-center py-8">
+      <section className="h-screen landscape:hidden flex flex-col justify-center py-8">
         <Container>
           <h1 className="text-7xl sm:text-8xl font-bold tracking-tighter leading-tight text-left mb-8">
             R.Z's<br />Home.
@@ -53,7 +53,7 @@ export default function Index() {
         </Container>
       </section>
 
-      <div className="relative -mt-16">
+      <div className="landscape:-mt-16">
         <Container>
           {/* Introduction - Landscape only (portrait has it in first screen) */}
           <ScrollReveal className="bg-white dark:bg-slate-900">
