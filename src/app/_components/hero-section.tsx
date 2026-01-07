@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Container from "./container";
 import CoverImage from "./cover-image";
 import { ExpandableSection } from "./expandable-section";
+import { ThemeSwitcher } from "./theme-switcher";
 
 interface HeroSectionProps {
   isLandscape?: boolean;
@@ -48,10 +49,11 @@ export function HeroSection({ isLandscape = false, projects = [] }: HeroSectionP
         >
           <div ref={containerRef}>
             <Container>
-              <div className="sticky top-0 pt-4 pb-4 bg-white dark:bg-slate-900 z-20">
+              <div className="sticky top-0 pt-4 pb-4 bg-white dark:bg-slate-900 z-20 flex items-center justify-between">
                 <h1 className="text-5xl lg:text-8xl font-bold tracking-tighter leading-tight text-left">
                   R.Z's Home.
                 </h1>
+                <ThemeSwitcher />
               </div>
               <div className="mb-2 lg:mb-4 max-h-[55vh] overflow-hidden">
                 <CoverImage
@@ -85,10 +87,11 @@ export function HeroSection({ isLandscape = false, projects = [] }: HeroSectionP
       >
         <div ref={containerRef}>
           <Container>
-            <div className="sticky top-0 pt-8 pb-4 bg-white dark:bg-slate-900 z-20">
+            <div className="sticky top-0 pt-8 pb-4 bg-white dark:bg-slate-900 z-20 flex items-center justify-between">
               <h1 className="text-6xl sm:text-8xl font-bold tracking-tighter leading-tight text-left">
                 R.Z's Home.
               </h1>
+              <ThemeSwitcher />
             </div>
             <div className="mb-6 max-h-[30vh] overflow-hidden">
               <CoverImage
