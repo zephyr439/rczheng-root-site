@@ -49,7 +49,7 @@ export function HeroSection({ isLandscape = false }: HeroSectionProps) {
           </div>
         </div>
         <div
-          className="transition-all duration-1000 ease-in-out min-h-screen"
+          className="transition-all duration-1000 ease-in-out"
           style={{ flex: scrolled ? '0 0 0' : '1 1 0' }}
         />
       </div>
@@ -82,7 +82,7 @@ export function HeroSection({ isLandscape = false }: HeroSectionProps) {
         </div>
       </div>
       <div
-        className="transition-all duration-1000 ease-in-out min-h-screen"
+        className="transition-all duration-1000 ease-in-out"
         style={{ flex: scrolled ? '0 0 0' : '1 1 0' }}
       />
     </div>
