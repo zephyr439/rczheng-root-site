@@ -27,7 +27,7 @@ export function HeroSection({ isLandscape = false }: HeroSectionProps) {
 
   if (isLandscape) {
     return (
-      <div className="flex flex-col">
+      <>
         <div className="min-h-screen flex flex-col justify-center">
           <div ref={containerRef}>
             <Container>
@@ -48,16 +48,13 @@ export function HeroSection({ isLandscape = false }: HeroSectionProps) {
             </Container>
           </div>
         </div>
-        <div
-          className="transition-all duration-1000 ease-in-out"
-          style={{ flex: scrolled ? '0 0 0' : '1 1 0' }}
-        />
-      </div>
+        <div className={`transition-all duration-1000 ease-in-out ${scrolled ? '' : 'min-h-screen'}`} />
+      </>
     );
   }
 
   return (
-    <div className="flex flex-col">
+    <>
       <div className="min-h-screen flex flex-col justify-center">
         <div ref={containerRef}>
           <Container>
@@ -81,10 +78,7 @@ export function HeroSection({ isLandscape = false }: HeroSectionProps) {
           </Container>
         </div>
       </div>
-      <div
-        className="transition-all duration-1000 ease-in-out"
-        style={{ flex: scrolled ? '0 0 0' : '1 1 0' }}
-      />
-    </div>
+      <div className={`transition-all duration-1000 ease-in-out ${scrolled ? '' : 'min-h-screen'}`} />
+    </>
   );
 }
