@@ -11,6 +11,7 @@ interface HeroSectionProps {
 export function HeroSection({ isLandscape = false }: HeroSectionProps) {
   const [scrolled, setScrolled] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const [gapHeight, setGapHeight] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +24,21 @@ export function HeroSection({ isLandscape = false }: HeroSectionProps) {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const calculateGap = () => {
+      if (containerRef.current) {
+        const contentHeight = containerRef.current.offsetHeight;
+        const viewportHeight = window.innerHeight;
+        const gap = Math.max(0, (viewportHeight - contentHeight) / 2);
+        setGapHeight(gap);
+      }
+    };
+
+    calculateGap();
+    window.addEventListener("resize", calculateGap);
+    return () => window.removeEventListener("resize", calculateGap);
   }, []);
 
   if (isLandscape) {
@@ -48,7 +64,13 @@ export function HeroSection({ isLandscape = false }: HeroSectionProps) {
             </Container>
           </div>
         </div>
-        <div className={`transition-all duration-1000 ease-in-out ${scrolled ? '' : 'min-h-screen'}`} />
+        <div
+          style={{
+            height: scrolled ? '0px' : `${gapHeight}px`,
+            transition: 'height 1s ease-in-out',
+            overflow: 'hidden'
+          }}
+        />
       </>
     );
   }
@@ -78,7 +100,13 @@ export function HeroSection({ isLandscape = false }: HeroSectionProps) {
           </Container>
         </div>
       </div>
-      <div className={`transition-all duration-1000 ease-in-out ${scrolled ? '' : 'min-h-screen'}`} />
+      <div
+        style={{
+          height: scrolled ? '0px' : `${gapHeight}px`,
+          transition: 'height 1s ease-in-out',
+          overflow: 'hidden'
+        }}
+      />
     </>
   );
 }
