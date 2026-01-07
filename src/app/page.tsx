@@ -15,7 +15,7 @@ export default function Index() {
       {/* Landscape Layout */}
       <div className="hidden landscape:block">
         {/* First Screen - Title scrolls up and sticks */}
-        <div className="h-screen flex flex-col justify-center">
+        <div className="min-h-screen flex flex-col justify-center pb-8">
           <Container>
             <div className="sticky top-0 pt-4 pb-4 bg-white dark:bg-slate-900 z-20">
               <h1 className="text-5xl lg:text-8xl font-bold tracking-tighter leading-tight text-left">
@@ -28,7 +28,7 @@ export default function Index() {
                 src="/assets/blog/dynamic-routing/cover.jpg"
               />
             </div>
-            <p className="text-xs lg:text-sm text-gray-600 dark:text-gray-400 text-left">
+            <p className="text-xs lg:text-sm text-gray-600 dark:text-gray-400 text-left mb-0">
               Hanksville, UT. Sept 2025
             </p>
           </Container>
@@ -84,7 +84,7 @@ export default function Index() {
       {/* Portrait Layout */}
       <div className="landscape:hidden">
         {/* First Screen - Title scrolls up and sticks */}
-        <div className="h-screen flex flex-col justify-center">
+        <div className="min-h-screen flex flex-col justify-center pb-8">
           <Container>
             <div className="sticky top-0 pt-8 pb-4 bg-white dark:bg-slate-900 z-20">
               <h1 className="text-7xl sm:text-8xl font-bold tracking-tighter leading-tight text-left">
@@ -100,7 +100,7 @@ export default function Index() {
             <p className="text-base text-gray-600 dark:text-gray-400 text-left mb-8">
               Hanksville, UT. Sept 2025
             </p>
-            <p className="text-2xl leading-relaxed text-gray-800 dark:text-gray-200">
+            <p className="text-2xl leading-relaxed text-gray-800 dark:text-gray-200 mb-0">
               <strong>I'm Ruichen Zheng</strong>, a Math & CS student at Dartmouth who spends half the time training models and the other half exploring the world. Currently interested in ML, AI for Education, and Web Development.
             </p>
           </Container>
