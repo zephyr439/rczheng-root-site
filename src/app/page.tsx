@@ -11,13 +11,14 @@ export default function Index() {
   ];
 
   return (
-    <main className="relative">
-      {/* First Screen - Landscape/Wide: Header + Image only */}
-      <div className="h-screen hidden landscape:block sticky top-0">
-        <section className="h-screen flex flex-col justify-center py-4 bg-white dark:bg-slate-900">
+    <main className="bg-white dark:bg-slate-900">
+      {/* Landscape Layout */}
+      <div className="hidden landscape:block">
+        {/* First Screen - Title scrolls up and sticks */}
+        <div className="h-screen flex flex-col justify-center">
           <Container>
-            <div className="flex-col flex mb-4 lg:mb-8">
-              <h1 className="text-5xl lg:text-8xl font-bold tracking-tighter leading-tight text-left mb-4 lg:mb-12">
+            <div className="sticky top-0 pt-4 pb-4 bg-white dark:bg-slate-900 z-20">
+              <h1 className="text-5xl lg:text-8xl font-bold tracking-tighter leading-tight text-left">
                 R.Z's Home.
               </h1>
             </div>
@@ -31,16 +32,65 @@ export default function Index() {
               Hanksville, UT. Sept 2025
             </p>
           </Container>
-        </section>
+        </div>
+
+        {/* Content appears after scrolling */}
+        <Container>
+          <section className="mb-16 md:mb-20">
+            <p className="text-xl lg:text-2xl leading-relaxed text-gray-800 dark:text-gray-200">
+              <strong>I'm Ruichen Zheng</strong>, a Math & CS student at Dartmouth who spends half the time training models and the other half exploring the world. Currently interested in ML, AI for Education, and Web Development.
+            </p>
+          </section>
+
+          <section className="mb-16 md:mb-20">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+              The Academic Half
+            </h2>
+            <div className="mb-4">
+              <a
+                href="/cv.pdf"
+                className="text-lg font-medium text-blue-600 dark:text-blue-400 hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Here is my CV →
+              </a>
+            </div>
+            <ExpandableSection title="Current Projects" items={currentProjects} />
+          </section>
+
+          <section className="mb-20 md:mb-28">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+              The Adventure Half
+            </h2>
+            <div className="text-xl md:text-2xl leading-relaxed text-gray-800 dark:text-gray-200 mb-6 space-y-4">
+              <p>The other half?</p>
+              <p>From African savannas to Arctic fjords, from rainforest streams to glacial peaks.</p>
+              <p><strong>60+ countries, 30+ national parks</strong>, and countless stories captured through my lens.</p>
+              <p>The journey continues.</p>
+            </div>
+            <div className="mt-4">
+              <a
+                href="/journeys"
+                className="text-lg text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                View my travel portfolio →
+              </a>
+            </div>
+          </section>
+        </Container>
       </div>
 
-      {/* First Screen - Portrait/Narrow: Header + Image + Intro */}
-      <div className="h-screen landscape:hidden sticky top-0">
-        <section className="h-screen flex flex-col justify-center py-8 bg-white dark:bg-slate-900">
+      {/* Portrait Layout */}
+      <div className="landscape:hidden">
+        {/* First Screen - Title scrolls up and sticks */}
+        <div className="h-screen flex flex-col justify-center">
           <Container>
-            <h1 className="text-7xl sm:text-8xl font-bold tracking-tighter leading-tight text-left mb-8">
-              R.Z's<br />Home.
-            </h1>
+            <div className="sticky top-0 pt-8 pb-4 bg-white dark:bg-slate-900 z-20">
+              <h1 className="text-7xl sm:text-8xl font-bold tracking-tighter leading-tight text-left">
+                R.Z's<br />Home.
+              </h1>
+            </div>
             <div className="mb-6 max-h-[30vh] overflow-hidden">
               <CoverImage
                 title="R. Zheng's Personal Website"
@@ -54,25 +104,14 @@ export default function Index() {
               <strong>I'm Ruichen Zheng</strong>, a Math & CS student at Dartmouth who spends half the time training models and the other half exploring the world. Currently interested in ML, AI for Education, and Web Development.
             </p>
           </Container>
-        </section>
-      </div>
+        </div>
 
-      {/* Content that slides up over the sticky first screen */}
-      <div className="relative z-10 bg-white dark:bg-slate-900">
+        {/* Content appears after scrolling */}
         <Container>
-          {/* Introduction - Landscape only (portrait has it in first screen) */}
-          <section className="pt-16 mb-16 md:mb-20 hidden landscape:block">
-            <p className="text-xl lg:text-2xl leading-relaxed text-gray-800 dark:text-gray-200">
-              <strong>I'm Ruichen Zheng</strong>, a Math & CS student at Dartmouth who spends half the time training models and the other half exploring the world. Currently interested in ML, AI for Education, and Web Development.
-            </p>
-          </section>
-
-          {/* The Academic Half */}
-          <section className="pt-8 landscape:pt-0 mb-16 md:mb-20">
+          <section className="pt-8 mb-16 md:mb-20">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100">
               The Academic Half
             </h2>
-
             <div className="mb-4">
               <a
                 href="/cv.pdf"
@@ -83,11 +122,9 @@ export default function Index() {
                 Here is my CV →
               </a>
             </div>
-
             <ExpandableSection title="Current Projects" items={currentProjects} />
           </section>
 
-          {/* The Adventure Half */}
           <section className="mb-20 md:mb-28">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100">
               The Adventure Half
