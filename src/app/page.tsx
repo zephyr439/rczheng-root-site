@@ -1,7 +1,6 @@
 import Container from "@/app/_components/container";
 import { ExpandableSection } from "@/app/_components/expandable-section";
-import CoverImage from "@/app/_components/cover-image";
-import { ScrollReveal } from "@/app/_components/scroll-reveal";
+import { HeroSection } from "@/app/_components/hero-section";
 
 export default function Index() {
   const currentProjects = [
@@ -14,25 +13,7 @@ export default function Index() {
     <main className="bg-white dark:bg-slate-900">
       {/* Landscape Layout */}
       <div className="hidden landscape:block">
-        {/* First Screen - Title scrolls up and sticks */}
-        <div className="min-h-screen flex flex-col justify-center pb-8">
-          <Container>
-            <div className="sticky top-0 pt-4 pb-4 bg-white dark:bg-slate-900 z-20">
-              <h1 className="text-5xl lg:text-8xl font-bold tracking-tighter leading-tight text-left">
-                R.Z's Home.
-              </h1>
-            </div>
-            <div className="mb-2 lg:mb-4 max-h-[55vh] overflow-hidden">
-              <CoverImage
-                title="R. Zheng's Personal Website"
-                src="/assets/blog/dynamic-routing/cover.jpg"
-              />
-            </div>
-            <p className="text-xs lg:text-sm text-gray-600 dark:text-gray-400 text-left mb-0">
-              Hanksville, UT. Sept 2025
-            </p>
-          </Container>
-        </div>
+        <HeroSection isLandscape={true} />
 
         {/* Content appears after scrolling */}
         <Container>
@@ -83,28 +64,7 @@ export default function Index() {
 
       {/* Portrait Layout */}
       <div className="landscape:hidden">
-        {/* First Screen - Title scrolls up and sticks */}
-        <div className="min-h-screen flex flex-col justify-center pb-8">
-          <Container>
-            <div className="sticky top-0 pt-8 pb-4 bg-white dark:bg-slate-900 z-20">
-              <h1 className="text-7xl sm:text-8xl font-bold tracking-tighter leading-tight text-left">
-                R.Z's<br />Home.
-              </h1>
-            </div>
-            <div className="mb-6 max-h-[30vh] overflow-hidden">
-              <CoverImage
-                title="R. Zheng's Personal Website"
-                src="/assets/blog/dynamic-routing/cover.jpg"
-              />
-            </div>
-            <p className="text-base text-gray-600 dark:text-gray-400 text-left mb-8">
-              Hanksville, UT. Sept 2025
-            </p>
-            <p className="text-2xl leading-relaxed text-gray-800 dark:text-gray-200 mb-0">
-              <strong>I'm Ruichen Zheng</strong>, a Math & CS student at Dartmouth who spends half the time training models and the other half exploring the world. Currently interested in ML, AI for Education, and Web Development.
-            </p>
-          </Container>
-        </div>
+        <HeroSection isLandscape={false} />
 
         {/* Content appears after scrolling */}
         <Container>
