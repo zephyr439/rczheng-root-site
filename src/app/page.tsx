@@ -11,51 +11,51 @@ export default function Index() {
 
   return (
     <main>
-      {/* First Screen - Desktop: Header + Image only */}
-      <section className="min-h-screen hidden md:flex flex-col justify-center">
+      {/* First Screen - Landscape/Wide: Header + Image only */}
+      <section className="min-h-screen hidden landscape:flex flex-col justify-center py-4">
         <Container>
-          <div className="flex-col flex items-center justify-center mb-12">
-            <h1 className="text-8xl font-bold tracking-tighter leading-tight text-center mb-16">
+          <div className="flex-col flex items-center justify-center mb-4 lg:mb-8">
+            <h1 className="text-5xl lg:text-8xl font-bold tracking-tighter leading-tight text-center mb-4 lg:mb-12">
               R.Z's Home.
             </h1>
           </div>
-          <div className="mb-4">
+          <div className="mb-2 lg:mb-4 max-h-[55vh] overflow-hidden">
             <CoverImage
               title="R. Zheng's Personal Website"
               src="/assets/blog/dynamic-routing/cover.jpg"
             />
           </div>
-          <p className="text-sm text-gray-600 dark:text-gray-400 text-left">
+          <p className="text-xs lg:text-sm text-gray-600 dark:text-gray-400 text-left">
             Hanksville, UT. Sept 2025
           </p>
         </Container>
       </section>
 
-      {/* First Screen - Mobile: Header + Image + Intro + CV */}
-      <section className="min-h-screen md:hidden flex flex-col justify-center py-8">
+      {/* First Screen - Portrait/Narrow: Header + Image + Intro */}
+      <section className="min-h-screen landscape:hidden flex flex-col justify-center py-6">
         <Container>
-          <h1 className="text-4xl font-bold tracking-tighter leading-tight text-center mb-8">
+          <h1 className="text-3xl sm:text-4xl font-bold tracking-tighter leading-tight text-center mb-4 sm:mb-6">
             R.Z's Home.
           </h1>
-          <div className="mb-2">
+          <div className="mb-2 max-h-[35vh] overflow-hidden">
             <CoverImage
               title="R. Zheng's Personal Website"
               src="/assets/blog/dynamic-routing/cover.jpg"
             />
           </div>
-          <p className="text-xs text-gray-600 dark:text-gray-400 text-center mb-6">
+          <p className="text-xs text-gray-600 dark:text-gray-400 text-center mb-4 sm:mb-6">
             Hanksville, UT. Sept 2025
           </p>
-          <p className="text-lg leading-relaxed text-gray-800 dark:text-gray-200">
+          <p className="text-base sm:text-lg leading-relaxed text-gray-800 dark:text-gray-200">
             <strong>I'm Ruichen Zheng</strong>, a Math & CS student at Dartmouth who spends half the time training models and the other half exploring the world. Currently interested in ML, AI for education, and web development.
           </p>
         </Container>
       </section>
 
       <Container>
-        {/* Introduction - Desktop only (mobile has it in first screen) */}
-        <section className="mb-16 md:mb-20 hidden md:block">
-          <p className="text-2xl leading-relaxed text-gray-800 dark:text-gray-200">
+        {/* Introduction - Landscape only (portrait has it in first screen) */}
+        <section className="mb-16 md:mb-20 hidden landscape:block">
+          <p className="text-xl lg:text-2xl leading-relaxed text-gray-800 dark:text-gray-200">
             <strong>I'm Ruichen Zheng</strong>, a Math & CS student at Dartmouth who spends half the time training models and the other half exploring the world. Currently interested in ML, AI for education, and web development.
           </p>
         </section>
