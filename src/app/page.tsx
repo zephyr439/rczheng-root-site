@@ -59,6 +59,32 @@ export default function Index() {
               </a>
             </div>
           </section>
+
+          {/* Contact Section */}
+          <section className="mb-20 md:mb-28 border-t border-gray-200 dark:border-gray-700 pt-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+              Contact
+            </h2>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 mb-8">
+              <a
+                href="mailto:zrc439@outlook.com"
+                className="text-lg text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                Email
+              </a>
+              <a
+                href="https://www.linkedin.com/in/rc-zheng/"
+                className="text-lg text-blue-600 dark:text-blue-400 hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+            </div>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              © 2026 Ruichen Zheng
+            </p>
+          </section>
         </Container>
       </div>
 
@@ -103,6 +129,32 @@ export default function Index() {
                 View my travel portfolio →
               </a>
             </div>
+          </section>
+
+          {/* Contact Section */}
+          <section className="mb-20 md:mb-28 border-t border-gray-200 dark:border-gray-700 pt-12">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+              Contact
+            </h2>
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 mb-8">
+              <a
+                href="mailto:zrc439@outlook.com"
+                className="text-lg text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                Email
+              </a>
+              <a
+                href="https://www.linkedin.com/in/rc-zheng/"
+                className="text-lg text-blue-600 dark:text-blue-400 hover:underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LinkedIn
+              </a>
+            </div>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              © 2026 Ruichen Zheng
+            </p>
           </section>
         </Container>
       </div>
