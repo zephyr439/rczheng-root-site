@@ -27,8 +27,7 @@ export function HeroSection({ isLandscape = false }: HeroSectionProps) {
 
   if (isLandscape) {
     return (
-      <div>
-        <div className="h-[20vh]" />
+      <div className="min-h-screen flex flex-col justify-center">
         <Container>
           <div className="sticky top-0 pt-4 pb-4 bg-white dark:bg-slate-900 z-20">
             <h1 className="text-5xl lg:text-8xl font-bold tracking-tighter leading-tight text-left">
@@ -46,17 +45,17 @@ export function HeroSection({ isLandscape = false }: HeroSectionProps) {
           </p>
         </Container>
         <div
-          className={`transition-all duration-1000 ${
-            scrolled ? "h-0" : "h-[30vh]"
-          }`}
+          style={{
+            marginBottom: scrolled ? '0' : '30vh',
+            transition: 'margin-bottom 1s ease'
+          }}
         />
       </div>
     );
   }
 
   return (
-    <div>
-      <div className="h-[10vh]" />
+    <div className="min-h-screen flex flex-col justify-center">
       <Container>
         <div className="sticky top-0 pt-8 pb-4 bg-white dark:bg-slate-900 z-20">
           <h1 className="text-7xl sm:text-8xl font-bold tracking-tighter leading-tight text-left">
@@ -77,9 +76,10 @@ export function HeroSection({ isLandscape = false }: HeroSectionProps) {
         </p>
       </Container>
       <div
-        className={`transition-all duration-1000 ${
-          scrolled ? "h-0" : "h-[20vh]"
-        }`}
+        style={{
+          marginBottom: scrolled ? '0' : '20vh',
+          transition: 'margin-bottom 1s ease'
+        }}
       />
     </div>
   );
