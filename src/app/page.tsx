@@ -17,7 +17,7 @@ export default function Index() {
 
         {/* Content appears after scrolling */}
         <Container>
-          <section className="mb-16 md:mb-20">
+          <section className="mt-16 md:mt-20 mb-16 md:mb-20">
             <p className="text-xl lg:text-2xl leading-relaxed text-gray-800 dark:text-gray-200">
               <strong>I'm Ruichen Zheng</strong>, a Math & CS student at Dartmouth who spends half the time training models and the other half exploring the world. Currently interested in ML, AI for Education, and Web Development.
             </p>
@@ -68,7 +68,7 @@ export default function Index() {
 
         {/* Content appears after scrolling */}
         <Container>
-          <section className="pt-8 mb-16 md:mb-20">
+          <section className="mt-16 md:mt-20 mb-16 md:mb-20">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100">
               The Academic Half
             </h2>
