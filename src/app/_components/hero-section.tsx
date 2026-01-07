@@ -39,7 +39,11 @@ export function HeroSection({ isLandscape = false }: HeroSectionProps) {
   if (isLandscape) {
     return (
       <>
-        <div className="min-h-screen flex flex-col justify-center">
+        <div
+          style={{
+            marginTop: `${(viewportHeight - (containerRef.current?.offsetHeight || 0)) / 2}px`
+          }}
+        >
           <div ref={containerRef}>
             <Container>
               <div className="sticky top-0 pt-4 pb-4 bg-white dark:bg-slate-900 z-20">
@@ -61,7 +65,7 @@ export function HeroSection({ isLandscape = false }: HeroSectionProps) {
         </div>
         <div
           style={{
-            height: scrolled ? '0px' : `${viewportHeight}px`,
+            height: scrolled ? '0px' : `${(viewportHeight - (containerRef.current?.offsetHeight || 0)) / 2}px`,
             transition: 'height 1s ease-in-out',
             overflow: 'hidden'
           }}
@@ -72,7 +76,11 @@ export function HeroSection({ isLandscape = false }: HeroSectionProps) {
 
   return (
     <>
-      <div className="min-h-screen flex flex-col justify-center">
+      <div
+        style={{
+          marginTop: `${(viewportHeight - (containerRef.current?.offsetHeight || 0)) / 2}px`
+        }}
+      >
         <div ref={containerRef}>
           <Container>
             <div className="sticky top-0 pt-8 pb-4 bg-white dark:bg-slate-900 z-20">
@@ -97,7 +105,7 @@ export function HeroSection({ isLandscape = false }: HeroSectionProps) {
       </div>
       <div
         style={{
-          height: scrolled ? '0px' : `${viewportHeight}px`,
+          height: scrolled ? '0px' : `${(viewportHeight - (containerRef.current?.offsetHeight || 0)) / 2}px`,
           transition: 'height 1s ease-in-out',
           overflow: 'hidden'
         }}
