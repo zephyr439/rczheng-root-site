@@ -31,7 +31,8 @@ export function HeroSection({ isLandscape = false }: HeroSectionProps) {
       if (containerRef.current) {
         const contentHeight = containerRef.current.offsetHeight;
         const viewportHeight = window.innerHeight;
-        const gap = Math.max(0, (viewportHeight - contentHeight) / 2);
+        // Full gap, not divided by 2, because justify-center already handles the top gap
+        const gap = Math.max(0, viewportHeight - contentHeight);
         setGapHeight(gap);
       }
     };
