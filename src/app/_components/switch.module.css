@@ -1,8 +1,8 @@
 .switch {
   all: unset;
-  position: absolute;
+  position: fixed;
   right: 20px;
-  top: 70px;
+  top: 20px;
   display: inline-block;
   color: currentColor;
   border-radius: 50%;
@@ -12,6 +12,7 @@
   height: var(--size);
   width: var(--size);
   transition: all 0.3s ease-in-out 0s !important;
+  z-index: 9999;
 }
 
 [data-mode="system"] .switch::after {
