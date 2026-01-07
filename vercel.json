@@ -27,6 +27,14 @@
     {
       "source": "/engs4/lab1",
       "destination": "https://engs4-lab1.vercel.app/"
+    },
+    {
+      "source": "/journeys/:path*",
+      "destination": "https://rczheng-journey.vercel.app/:path*"
+    },
+    {
+      "source": "/journeys",
+      "destination": "https://rczheng-journey.vercel.app/"
     }
   ]
 }
