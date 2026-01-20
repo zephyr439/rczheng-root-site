@@ -35,6 +35,14 @@
     {
       "source": "/journeys",
       "destination": "https://rczheng-journey.vercel.app/"
+    },
+    {
+      "source": "/cs52/lab2/:path*",
+      "destination": "https://cs52-lab2-iota.vercel.app/:path*"
+    },
+    {
+      "source": "/cs52/lab2",
+      "destination": "https://cs52-lab2-iota.vercel.app/"
     }
   ]
 }
