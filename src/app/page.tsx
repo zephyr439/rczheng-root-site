@@ -9,6 +9,11 @@ export default function Index() {
     { name: "Universal Matching Game", url: "https://universalmatching.com/" },
   ];
 
+  const cs52Labs = [
+    { name: "Lab 1", url: "/cs52/lab1" },
+    { name: "Lab 2", url: "/cs52/lab2" },
+  ];
+
   return (
     <main className="bg-white dark:bg-slate-900">
       {/* Landscape Layout */}
@@ -56,6 +61,14 @@ export default function Index() {
                 View my travel portfolio →
               </a>
             </div>
+          </section>
+
+          {/* CS52 Course Labs Section */}
+          <section className="mb-20 md:mb-28">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+              CS52 Course Labs
+            </h2>
+            <ExpandableSection title="View Labs" items={cs52Labs} />
           </section>
 
           {/* Contact Section */}
@@ -110,6 +123,14 @@ export default function Index() {
                 View my travel portfolio →
               </a>
             </div>
+          </section>
+
+          {/* CS52 Course Labs Section */}
+          <section className="mb-20 md:mb-28">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900 dark:text-gray-100">
+              CS52 Course Labs
+            </h2>
+            <ExpandableSection title="View Labs" items={cs52Labs} />
           </section>
 
           {/* Contact Section */}
